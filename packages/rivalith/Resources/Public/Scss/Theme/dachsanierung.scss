@@ -1,0 +1,107 @@
+.page-25 {
+  background-color: #EBF6FD;
+}
+
+// bild unter text in mobiler ansicht
+@media (max-width: 768px) {
+  #c36 .textpic {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #c36 .textpic-gallery {
+    order: 2;
+  }
+
+  #c36 .textpic-text {
+    order: 1;
+  }
+}
+
+//bild mobile kleiner und desktop auch kleiner
+#c36 img {
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+
+  @media (min-width: 1024px) {
+      width: 44%;
+  }
+
+  @media (max-width: 768px) {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+#c36 img:hover {
+    transform: scale(1.01);
+}
+
+#c36 h2 {
+  font-size: 5dvh;
+  font-weight: bold;
+  color: #4FC3F7;
+  margin-top: 7px;
+}
+
+#c37 h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #4FC3F7;
+  margin-top: 7px;
+}
+
+
+#c37 {
+  h1 {
+    color: #4FC3F7;
+  }
+
+  p {
+    font-size: large;
+  }
+}
+
+//icons farbe
+svg {
+  color: #4FC3F7;
+}
+
+// mobile für icons
+@media (max-width: 768px) {
+
+  .icongroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .icongroup-item {
+    flex: 1 1 33%;
+    max-width: 33%;
+    text-align: center;
+  }
+
+  .icongroup-item-text-header {
+    font-size: 100%;
+  }
+}
+
+.textpic {
+  border: solid 5px #DDE3EA;
+  border-radius: 18px;
+  background-color: #4FC3F730;
+  box-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.05),
+          0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+//top-banner
+#c96 {
+  background-color: #86CBF1;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #3F3F3F;
+}

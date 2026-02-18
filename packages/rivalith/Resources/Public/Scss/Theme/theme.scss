@@ -1,0 +1,120 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+
+@import "home";
+@import "memberbereich";
+@import "dachsanierung";
+@import "lichtkuppeln";
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+#page-header {
+  background-color: #DDE3EA !important;
+}
+
+#page-footer {
+
+}
+
+.footer-section {
+  background-color: #DDE3EA !important;
+}
+
+.footer-navigation-list {
+  color: black !important;
+  align-content: center !important;
+}
+
+.footer-navigation-link-text {
+  text-align: center !important;
+}
+
+//footer text schwarz
+.bp-page-footer {
+  .frame {
+    color: black !important;
+  }
+}
+
+//gallery ausblenden
+#c82 .gallery-row {
+  display: none;
+}
+
+//bei mobile slider deaktivieren und normale gallery anzeigen
+@media (max-width: 1400px) {
+  img-comparison-slider { display: none; }
+  #c82 .gallery-row { display: flex; }
+}
+
+
+@media (max-width: 768px) {
+  .footer-section-content-column-left {
+    display: flex;
+    justify-content: center; /* horizontal zentrieren */
+  }
+  .footer-section-content-column-left .frame,
+  .footer-section-content-column-left .gallery-row,
+  .footer-section-content-column-left .gallery-item,
+  .footer-section-content-column-left figure.image {
+    width: auto;  /* erlaubt Flexbox Zentrierung */
+    margin: 0;    /* alle Standard-Margins entfernen */
+  }
+
+  /* Bild selbst auf max 100% setzen, damit es skaliert */
+  .footer-section-content-column-left img {
+    display: block;   /* block für Flexbox */
+    max-width: 100%;  /* passt sich Container-Breite an */
+    height: auto;
+  }
+  .footer-section-content-column-middle,
+  .footer-section-content-column-right {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
+}
+
+//footer liste zentrieren
+ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+ul li {
+  text-align: center;
+}
+
+.footer-section-meta {
+  p {
+    text-align: center;
+    color: black !important;
+  }
+}
+
+.frame-type-macgyer_imagecomparisonslider h1 {
+  font-size: 250%;
+  font-weight: bold;
+  color: #4FC3F7;
+  margin-top: 7px;
+}
+
+//news
+.list-group-item {
+  margin: 10px;
+}
+
+
+
