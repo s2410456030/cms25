@@ -1,7 +1,16 @@
 @import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
+
 page {
     includeCSS {
         theme = EXT:kwm2025/Resources/Public/Scss/Theme/theme.scss
+        css = https://use.fontawesome.com/releases/v6.4.2/css/all.css
+        css{
+            external = 1
+            media = all
+            excludeFromConcatenation = 1
+        }
     }
 
     includeJSLibs {
@@ -34,3 +43,6 @@ lib.maskContentElement {
         5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
     }
 }
+
+plugin.tx_form.settings.yamlConfigurations.100 = EXT:kwm2025/Configuration/Form/Setup.yaml
+module.tx_form.settings.yamlConfigurations.100 = EXT:kwm2025/Configuration/Form/Setup.yaml
