@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function updatePrice() {
         let area = parseFloat(areaInput.value) || 0;
 
-        // Min/Max validieren
+        // Min/Max
         const min = parseFloat(areaInput.dataset.min);
         const max = parseFloat(areaInput.dataset.max);
         if (area < min) area = min;
@@ -30,16 +30,34 @@ document.addEventListener('DOMContentLoaded', function () {
         // Gesamtpreis anzeigen
         totalPriceElem.textContent = total.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
 
-        // Arbeitsdauer in Tagen berechnen
+        // Arbeitsdauer berechnen
         const hoursPerM2 = parseFloat(areaInput.dataset.hoursPerM2) || 0;
         const totalHours = area * hoursPerM2;
 
-        const hoursPerDay = 8; // Standardarbeitstag
+        const hoursPerDay = 8;
         const totalDays = Math.ceil(totalHours / hoursPerDay);
 
         totalDurationElem.textContent = `${totalDays} Tage`;
     }
 
-    // Berechnung nur beim Button-Klick
     calculateBtn.addEventListener('click', updatePrice);
 });
+
+
+//hover up effekt, google reviews
+    document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll("#c69 .google-review");
+
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+    entry.target.classList.add("show");
+}
+});
+}, {
+    threshold: 0.2
+});
+
+    elements.forEach(el => observer.observe(el));
+});
+

@@ -1,0 +1,63 @@
+.page-26 {
+  background-color: #EBF6FD;
+}
+
+//top banner
+#c108 {
+  background-color: #86CBF1;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: #3F3F3F;
+}
+
+//top text
+#c107 {
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4FC3F7;
+    margin-top: 7px;
+  }
+  p {
+    font-size: large;
+  }
+}
+
+// bild unter text in mobiler ansicht
+@media (max-width: 768px) {
+  #c117 .textpic {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #c117 .textpic-gallery {
+    order: 2;
+  }
+
+  #c117 .textpic-text {
+    order: 1;
+  }
+}
+
+//bild mobile kleiner und desktop auch kleiner
+#c117 img {
+  border-radius: 5%;
+  transition: transform 0.3s ease;
+
+  @media (min-width: 1024px) {
+    width: 44%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 55%;
+    margin: 0 auto;
+  }
+}
+
+#c117 h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #4FC3F7;
+  margin-top: 7px;
+}

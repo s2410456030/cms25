@@ -12,6 +12,8 @@
 @import "memberbereich";
 @import "dachsanierung";
 @import "lichtkuppeln";
+@import "steinpflege";
+@import "kontakt";
 
 * {
   font-family: 'Inter', sans-serif;
@@ -46,34 +48,49 @@
 }
 
 //gallery ausblenden
-#c82 .gallery-row {
+.gallery-row {
   display: none;
+}
+
+#c36 .gallery-row {
+  display:flex;
+}
+
+#page-footer .gallery-row {
+  display: flex;
+}
+
+#c30 .gallery-row {
+  display: flex;
+}
+
+#c117 .gallery-row {
+  display:flex;
 }
 
 //bei mobile slider deaktivieren und normale gallery anzeigen
 @media (max-width: 1400px) {
   img-comparison-slider { display: none; }
-  #c82 .gallery-row { display: flex; }
+  .gallery-row { display: flex; }
 }
 
 
 @media (max-width: 768px) {
   .footer-section-content-column-left {
     display: flex;
-    justify-content: center; /* horizontal zentrieren */
+    justify-content: center;
   }
   .footer-section-content-column-left .frame,
   .footer-section-content-column-left .gallery-row,
   .footer-section-content-column-left .gallery-item,
   .footer-section-content-column-left figure.image {
-    width: auto;  /* erlaubt Flexbox Zentrierung */
-    margin: 0;    /* alle Standard-Margins entfernen */
+    width: auto;
+    margin: 0;
   }
 
-  /* Bild selbst auf max 100% setzen, damit es skaliert */
   .footer-section-content-column-left img {
-    display: block;   /* block für Flexbox */
-    max-width: 100%;  /* passt sich Container-Breite an */
+    display: block;
+    max-width: 100%;
     height: auto;
   }
   .footer-section-content-column-middle,
@@ -112,8 +129,17 @@ ul li {
 }
 
 //news
+.page-28 {
+  background-color: #EBF6FD;
+}
 .list-group-item {
-  margin: 10px;
+  background-color: #4FC3F730;
+  border: none;
+  margin: 20px;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 

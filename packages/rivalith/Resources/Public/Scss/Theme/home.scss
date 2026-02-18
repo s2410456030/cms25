@@ -7,7 +7,18 @@
 }
 
 .google-review {
-  background-color: #E2F2FC;
+  background-color: #EBF6FD;
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.google-review.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 //oberer Banner
@@ -89,3 +100,27 @@ h1 {
   }
 }
 
+#c69 h2, #c77 .element-header, #c30 h2 {
+  color: whitesmoke;
+  text-align: center;
+}
+
+#c77 .card-group-element-item .card{
+  background-color: #EBF6FD;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#c77 a, #c30 .btn {
+  color: whitesmoke;
+}
+
+#c38 {
+  background-color: #EBF6FD;
+  h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #4FC3F7;
+    margin-top: 7px;
+  }
+}
