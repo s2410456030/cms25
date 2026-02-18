@@ -1,0 +1,46 @@
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
+
+page {
+    includeCSS {
+        theme = EXT:rivalith/Resources/Public/Scss/Theme/theme.scss
+        css = https://use.fontawesome.com/releases/v6.4.2/css/all.css
+        css{
+            external = 1
+            media = all
+            excludeFromConcatenation = 1
+        }
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        rivalith_scripts = EXT:rivalith/Resources/Public/JavaScript/main.js
+    }
+}
+
+page.config.contentObjectExceptionHandler=0
+
+lib.maskContentElement {
+    templateRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
+    }
+    partialRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
+    }
+    layoutRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
+    }
+}
+

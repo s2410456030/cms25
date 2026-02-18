@@ -1,0 +1,28 @@
+plugin:
+  bootstrap_package:
+    settings:
+      scss:
+        primary: '#eb3e4a'
+        secondary: '#013859'
+    view:
+      layoutRootPath: 'EXT:rivalith/Resources/Private/Layouts/'
+      partialRootPath: 'EXT:rivalith/Resources/Private/Partials/'
+      templateRootPath: 'EXT:rivalith/Resources/Private/Templates/'
+  bootstrap_package_contentelements:
+    view:
+      layoutRootPath: 'EXT:rivalith/Resources/Private/Layouts/ContentElements/'
+      partialRootPath: 'EXT:rivalith/Resources/Private/Partials/ContentElements/'
+      templateRootPath: 'EXT:rivalith/Resources/Private/Templates/ContentElements/'
+page:
+  logo:
+    file: 'EXT:rivalith/Resources/Public/Images/logo.svg'
+    fileInverted: 'EXT:rivalith/Resources/Public/Images/logo-inverted.svg'
+    width: 192
+    alt: 'My Site Package'
+    linktitle: 'My Site Package'
+  favicon:
+    file: 'EXT:rivalith/Resources/Public/Icons/favicon.ico'
+  fluidtemplate:
+    layoutRootPath: 'EXT:rivalith/Resources/Private/Layouts/Page/'
+    partialRootPath: 'EXT:rivalith/Resources/Private/Partials/Page/'
+    templateRootPath: 'EXT:rivalith/Resources/Private/Templates/Page/'

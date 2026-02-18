@@ -1,0 +1,47 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="price-calculator">
+
+        <f:if condition="{data.tx_mask_projekt_name}">
+            <h3>{data.tx_mask_projekt_name}</h3>
+        </f:if>
+
+        <label for="area">Fläche in m²:</label>
+        <input type="number" id="area"
+               min="{data.tx_mask_min_m2}"
+               max="{data.tx_mask_max_m2}"
+               value="{data.tx_mask_min_m2}"
+               data-min="{data.tx_mask_min_m2}"
+               data-max="{data.tx_mask_max_m2}"
+               data-base-price="{data.tx_mask_preis_per_m2}"
+               data-hours-per-m2="{data.tx_mask_stunden_per_m2}" />
+
+        <f:if condition="{data.tx_mask_extra_options}">
+            <h4>Extras pro m² auswählen:</h4>
+            <ul>
+                <f:for each="{data.tx_mask_extra_options}" as="extra">
+                    <li>
+                        <label>
+                            <input type="checkbox" class="extra-checkbox" data-price="{extra.tx_mask_extra_preis}" />
+                            {extra.tx_mask_extras} (+{extra.tx_mask_extra_preis} €/m²)
+                        </label>
+                    </li>
+                </f:for>
+            </ul>
+        </f:if>
+
+        <p>Preis pro m²: <strong>{data.tx_mask_preis_per_m2} €</strong></p>
+
+        <button type="button" id="calculate-price" class="btn btn-primary mt-2">
+            Gesamtpreis berechnen
+        </button>
+
+        <p>Gesamtpreis: <strong id="total-price">0 €</strong></p>
+
+        <p>Geschätzte Arbeitsdauer: <strong id="total-duration">0 Tage</strong></p>
+    </div>
+</f:section>
+</html>

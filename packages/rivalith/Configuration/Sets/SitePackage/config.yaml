@@ -1,0 +1,4 @@
+name: fhooe/rivalith
+label: 'Rivalith'
+dependencies:
+  - bootstrap-package/full

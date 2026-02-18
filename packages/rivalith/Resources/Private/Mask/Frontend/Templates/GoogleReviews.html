@@ -1,0 +1,48 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+    <f:if condition="{data.tx_mask_titel}">
+        <h2 class="mask-title mb-4">{data.tx_mask_titel}</h2>
+    </f:if>
+    <div class="google-reviews row">
+    <f:for each="{data.tx_mask_reviews}" as="review">
+        <div class="review-style col-12 col-md-6 col-lg-4">
+            <div class="google-review h-100 p-3 border rounded mb-4">
+
+                <!-- Name -->
+                <f:if condition="{review.tx_mask_name}">
+                    <strong class="d-block mb-1">{review.tx_mask_name}</strong>
+                </f:if>
+
+                <!-- Sterne -->
+                <f:if condition="{review.tx_mask_stars}">
+                    <div class="stars mb-2">
+                        <f:for each="{1:1,2:2,3:3,4:4,5:5}" as="i">
+                            <f:if condition="{i} <= {review.tx_mask_stars}">
+                                <i class="fa fa-star text-warning"></i>
+                            </f:if>
+                            <f:if condition="{i} > {review.tx_mask_stars}">
+                                <i class="fa fa-star text-muted"></i>
+                            </f:if>
+                        </f:for>
+                    </div>
+                </f:if>
+
+                <!-- Text -->
+                <f:if condition="{review.tx_mask_text}">
+                    <div class="mb-2">{review.tx_mask_text -> f:format.raw()}</div>
+                </f:if>
+
+                <!-- Datum -->
+                <f:if condition="{review.tx_mask_date}">
+                    <small class="text-muted">{review.tx_mask_date -> f:format.date(format: 'd.m.Y')}</small>
+                </f:if>
+
+            </div>
+        </div>
+    </f:for>
+    </div>
+</f:section>
+</html>

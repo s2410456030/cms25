@@ -1,0 +1,22 @@
+@import './PageTsConfig/BackendLayouts/'
+
+RTE {
+    default {
+        preset = rivalith
+    }
+}
+
+TCEFORM {
+    pages {
+
+    }
+    tt_content {
+        layout.addItems.10 = ---------
+        layout.addItems.11 = Custom Text+Image Home
+    }
+}
+
+TCEMAIN {
+
+}
+
